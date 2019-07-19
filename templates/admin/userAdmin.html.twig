@@ -1,0 +1,148 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<div class="base">
+
+    <!-- Page -->
+    <div class="page">
+        <div class='admin-div'>
+            <section id="admin" class="section-padding">
+            <form action='{{ path('adminUserAdd' , {id:user.id} ) }}'>
+           <table>
+           <tr>
+           <th>id</th>
+           <td>{{ user.id }}</td>
+           </tr>
+           <tr>
+           <th>email</th>
+           <td>{{ user.email }}</td>
+           <td><input name='email' value='{{ user.email}} '></td>
+
+
+           </tr>
+           <tr>
+           <th>password</th>
+           <td>crypted</td>
+            
+           </tr>
+           <tr>
+           <th>gender</th>
+           <td>{{ user.gender }}</td>
+           <td><input name='gender' value='{{user.gender}}'></td>
+
+           </tr>
+           <tr>
+           <th>first name</th>
+           <td>{{ user.firstName }}</td>
+           <td><input name='firstName' value='{{user.firstName}}'></td>
+
+           </tr>
+           <tr>
+           <th>last name</th>
+           <td>{{ user.lastName }}</td>
+           <td><input name='lastName' value='{{user.lastName}}'></td>
+
+           </tr>
+           <tr>
+           <th>phone number</th>
+           <td>{{ user.phoneNumber }}</td>
+           <td><input name='phoneNumber' value='{{user.phoneNumber}}'></td>
+
+           </tr>
+           <tr>
+           <th>picture</th>
+           <td>{{ user.profilePicture }}</td>
+           <td><input name='profilePicture' value='{{user.profilePicture}}'></td>
+
+           </tr>
+           <tr>
+           <th>current location</th>
+           <td>{{ user.currentLocation }}</td>
+           <td><input name='currentLocation' value='{{user.currentLocation}}'></td>
+           </tr>
+           <tr>
+           <th>address</th>
+           <td>{{ user.address }}</td>
+            <td><input name='address' value='{{user.address}}'></td>
+           </tr>
+           <tr>
+           <th>country</th>
+           <td>{{ user.country }}</td>
+           <td><input name='country' value='{{user.country}}'></td>
+
+           </tr>
+           <tr>
+           <th>nationality</th>
+           <td>{{ user.nationality }}</td>
+           <td><input name='nationality' value='{{user.nationality}}'></td>
+
+           </tr>
+           <tr>
+           <th>birth date</th>
+           <td>{{ user.birthDate }}</td>
+           <td><input name='birthDate' value='{{user.birthDate}}'></td>
+
+           </tr>
+           <tr>
+           <th>passport</th>
+           <td>{{ user.passport }}</td>
+           <td><input name='passport' value='{{user.passport}}'></td>
+
+           </tr>
+           <tr>
+           <th>resume</th>
+           <td>{{ user.resume }}</td>
+           <td><input name='resume' value='{{user.resume}}'></td>
+
+           </tr>
+           <tr>
+           <th>experience</th>
+           <td>{{ user.experience }}</td>
+           <td><input name='experience' value='{{user.experience}}'></td>
+
+           </tr>
+           <tr>
+           <th>description</th>
+           <td>{{ user.description }}</td>
+           <td><input name='description' value='{{user.description}}'></td>
+
+           </tr>
+           <tr>
+           <th>note</th>
+           <td>{{ user.note }}</td>
+           <td><input name='note' type='number' value='{{user.note}}'></td>
+
+           </tr>
+           <tr>
+           <th>create at</th>
+           <td>{{ user.createdAt }}</td>
+            
+           </tr>
+           <tr>
+           <th>is admin</th>
+           <td>{{ user.isAdmin }}</td>
+           <td><input name='admin' type='checkbox' value='{{user.isAdmin}}'></td>
+
+           </tr>
+           <tr>
+           <th>availability</th>
+           <td>{{ user.availability }}</td>
+           <td><input name='availability' type='checkbox' value='{{user.availability}}'></td>
+
+           </tr>
+           <tr>
+           <th>job_category</th>
+           <td>{{ user.jobCategory }}</td>
+           <td><input name='jobsCategory' value='{{user.jobCategory}}'></td>
+
+           </tr>
+           
+            </table>
+            <input type='submit' value='submit'>
+            </form>
+            </section>
+            <hr>
+        </div>
+    </div>
+</div>
+{% endblock %}

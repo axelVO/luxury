@@ -1,0 +1,114 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<div class="base">
+
+    <!-- Page -->
+    <div class="page">
+        <div class='admin-div'>
+        <section id="admin" class="section-padding">
+           <div class="admin-hover"> USER</div>
+           <div class='subtitle'></div>
+<table>
+           <tbody>
+           <tr>
+           
+           <th>id</th>
+           
+           <th>email </th>
+                
+           <th>gender </th>
+
+           <th>first name </th>
+        
+           <th>last name </th>
+          
+           <th>phone number </th>
+      
+           <th>picture </th>
+
+           </tr>
+           {% for user in users %}
+           <tr>
+            
+               <td>{{ user.id }}</td>
+               <td><a href='{{ path('adminUser', {id:user.id}) }}'>{{ user.email }}</a></td>
+               <td>{{ user.gender }}</td>
+               <td>{{ user.firstName }}</td>
+               <td>{{ user.lastName }}</td>
+               <td>{{ user.phoneNumber }}</td>
+               <td>{{ user.profilePicture }}</td>
+
+           
+           </tr>
+           {% endfor %}
+           <tr>
+           <th>current location </th>
+
+           <th>address </th>
+
+           <th>contry </th>
+
+           <th>nationality </th>
+
+           <th>birth date </th>
+
+           <th>birth place </th>
+
+           <th>passport </th>
+
+ 
+           </tr>
+           {% for user in users %}
+           <tr>
+           
+               <td>{{ user.currentLocation }}</td>
+               <td>{{ user.address }}</td>
+               <td>{{ user.country }}</td>
+               <td>{{ user.nationality }}</td>
+               <td>{{ user.birthDate }}</td>
+               <td>{{ user.birthPlace }}</td>
+               <td>{{ user.passport }}</td>
+
+           
+           </tr>
+           {% endfor %}
+           <tr>
+
+           <th>resume </th>
+
+           <th>experience </th>
+
+           <th>description </th>
+
+           <th>note </th>
+
+           <th>is admin </th>
+
+           <th>availability </th>
+
+           <th>job_category </th>
+           </tr>
+           {% for user in users %}
+           <tr>
+           
+               <td>{{ user.resume }}</td>
+               <td>{{ user.experience }}</td>
+               <td>{{ user.description }}</td>
+               <td>{{ user.note }}</td>
+               <td>{{ user.isAdmin }}</td>
+               <td>{{ user.availability }}</td>
+               <td>{{ user.jobCategory }}</td>
+
+           
+           </tr>
+           {% endfor %}
+           </tbody>
+
+            </table> 
+            </section>
+            <hr>
+        </div>
+    </div>
+</div>
+{% endblock %}

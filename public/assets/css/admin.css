@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Playfair+Display:400,700,900');
+
+
+#admin{
+    background-color: #2f3138 ;
+}
+.subtitle{
+    height: 2px;
+    width: 0vw;
+    transition: 400ms all linear;
+    margin-left: 50vw;
+    background-color: #b6a575;
+
+}
+.admin-hover{
+    font-family: 'Playfair Display', serif!important;
+    font-weight: 700;
+    color: #b6a575;
+   font-size: xx-large;
+    width: 100vw;
+    height:40px;
+    text-align: center;
+    z-index: 10;
+    margin-bottom: 5px;
+}
+.admin-hover:hover + .subtitle {
+    width: 10vw;
+    margin-left: 45vw;
+}
+th{
+    border:solid black 2px !important;
+    font-size: 20px;
+}
+.table-hr{
+    color:black;
+    width: 100vw;
+    height: 2px;
+}
+td{
+    border: black 1px solid !important;
+}
